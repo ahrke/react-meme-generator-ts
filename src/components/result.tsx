@@ -7,7 +7,7 @@ interface ResultInterface {
 const Result = (props: ResultInterface) => {
   return (
     <div ref={props.resultContainerRef} className="result">
-
+      
     </div>
   )
 }

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, DOMElement } from 'react';
 import { render } from 'react-dom';
 import domtoimage from 'dom-to-image-more';
@@ -79,7 +80,7 @@ const App = () => {
       <Form
         textTop={textTop}
         textBottom={textBottom}
-        handleImageInputChange={handleInputImageChange}
+        handleImageInputChange={handleImageInputChange}
         handleInputChange={handleInputChange}
         handleImageChange={handleImageChange}
         handleMemeGeneration={handleMemeGeneration}

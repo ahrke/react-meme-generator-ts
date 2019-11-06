@@ -6,6 +6,7 @@ interface FormInterface {
   textTop: string;
   handleImageChange: () => void;
   handleImageInputChange: (event: React.ChangeEvent) => void;
+  handleInputChange: (event: React.ChangeEvent) => void;
   handleMemeGeneration: () => void;
   handleMemeReset: () => void;
 }
@@ -19,7 +20,7 @@ const Form = (props: FormInterface) => {
           placeholder="Text Top"
           type="text"
           value={props.textTop}
-          onChange={props.handleImageInputChange}
+          onChange={props.handleInputChange}
         />
 
         <input
@@ -32,13 +33,12 @@ const Form = (props: FormInterface) => {
       </div>
 
       <div className="form_btns">
-        <button
+        <label
           className="btn btn-primary"
-          type="button"
           onClick={props.handleImageChange}
         >
           Change Image
-        </button>
+        </label>
 
         <label
           className="btn btn-primary"
@@ -55,13 +55,12 @@ const Form = (props: FormInterface) => {
           />
         </label>
 
-        <button
+        <label
           className="btn btn-primary"
-          type="button"
           onClick={props.handleMemeGeneration}
         >
           Generate Meme
-        </button>
+        </label>
 
         {props.isMemeGenerated && 
           <button
